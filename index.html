@@ -19,6 +19,8 @@
 		
 			<todo-item></todo-item>
 	</ul>
+	<h1 v-if="ok">Yes</h1>
+	<h1 v-else>No</h1>
 </div>
 <script type="text/javascript">
 	Vue.component("todo-item",{
@@ -27,6 +29,7 @@
 	var app = new Vue({
 		el : "#main",
 		data : {
+			ok : false,
 			message : "hover" + new Date(),
 			isShow : true,
 			mess : "",
