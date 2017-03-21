@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<script type="text/javascript" src="../vue/vue.min.js"></script>
+<body>
+<div id="main">
+	<ul>
+		<my-com v-for="item in groceryList" v-bind:todos="item"></my-com>
+	</ul>
+</div>
+<div id="app-7">
+  <ol>
+    <!-- 现在我们为每个todo-item提供待办项对象    -->
+    <!-- 待办项对象是变量，即其内容可以是动态的 -->
+    <my-item v-for="item in groceryList" v-bind:todo="item"></my-item>
+  </ol>
+</div>
+<div id="main2">
+	<ul>
+		<my-comm v-for="text in texts" v-bind:prop="text"></my-comm>
+	</ul>
+</div>
+<script type="text/javascript">
+	Vue.component("my-com",{
+		props : ["todos"],
+		template : "<li>{{todos.text}}</li>"
+	});
+	var app = new Vue({
+		el : "#main",
+		data : {
+			 groceryList: [
+		      { text: '蔬菜' },
+		      { text: '奶酪' },
+		      { text: '随便其他什么人吃的东西' }
+		    ]
+		}
+	});
+	Vue.component('my-item', {
+	  props: ['todo'],
+	  template: '<li>{{ todo.text }}</li>'
+	})
+	var app7 = new Vue({
+	  el: '#app-7',
+	  data: {
+	    groceryList: [
+	      { text: '蔬菜' },
+	      { text: '奶酪' },
+	      { text: '随便其他什么人吃的东西' }
+	    ]
+	  }
+	});
+	Vue.component("my-comm",{
+		props : ["prop"],
+		template : "<li>{{prop.text}}</li>"
+	});
+	new Vue({
+		el : "#main2",
+		data : {
+			texts : [
+				{text : "11"},
+				{text : "12"},
+				{text : "13"},
+				{text : "14"},
+				{text : "15"}
+			]
+		}
+	})
+</script>
+</body>
+</html>

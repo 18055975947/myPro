@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+</head>
+<script type="text/javascript" src="../vue/vue.min.js"></script>
+<body>
+<div id="main">
+	<!-- <li v-for="n in nums">{{n | filterfir |RMB}} <br/> {{n | RMB}}</li> -->
+	<!-- <li v-for="n in evenNumbers">{{ n }}</li> -->
+	<input :type="types" name="" >
+	<button @click="llclick">show/hidden</button><hr/>
+	<input type="checkbox" id="checkbox" v-model="checked">
+	<label for="checkbox">{{ checked }}</label>
+</div>
+<script type="text/javascript">
+	new Vue({
+		el : "#main",
+		data : {
+			types : "password",
+			checked : false
+		},
+		methods : {
+			llclick : function() {
+				console.log(this.checked);
+				if (this.checked) {
+					this.types = "text";
+				} else {
+					this.types = "password";
+				}
+			}
+		}
+		
+	})
+	/*new Vue({
+		el : "#main",
+		data : {
+			nums : [1,2,3,4,5]
+		},
+		filters : {
+			filterfir : function(value) {
+				if(!value) return ""
+				// body...
+				if ((value % 2) === 0)
+				return value
+			},
+			RMB : function(value) {
+				if(!value) return ""
+				if (isNaN(value)) return ""
+				return "￥" + value
+			}
+		}
+	})*/
+	new Vue({
+		el : "#main",
+		data: {
+		  numbers: [ 1, 2, 3, 4, 5 ]
+		},
+		computed: {
+		  evenNumbers: function () {
+		    return this.numbers.filter(function (number) {
+		      return number % 2 === 0
+		    })
+		  }
+		}
+	})
+</script>
+</body>
+</html>

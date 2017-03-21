@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>d</title>
+	<script type="text/javascript" src="../vue/vue.min.js"></script>
+</head>
+<body>
+<div id="main">
+	<input type="text" v-model.lazy="checked"><hr/>
+	<input type="text" v-model.trim="checked" v-on:change="cl">
+	<input type="text" v-model="checked" v-on:change="cl">
+</div>
+
+<script type="text/javascript">
+	var app = new Vue({
+		el : "#main",
+		data : {
+			checked : ""
+		},
+		methods : {
+			ch : function(el) {
+				this.checked = el.target.value;
+			},
+			cl : function(e) {
+				console.log(e.target.value.length);
+			}
+		}
+		
+	})
+	
+</script>
+</body>
+</html>
