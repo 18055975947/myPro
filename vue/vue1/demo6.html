@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{pow()}} <br/>
+			{{now}}
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					count : 10
+				},
+				methods:{
+					pow:function(){
+						return this.count*this.count;
+					}
+				},
+				computed: {
+				  now: function () {
+				    return Date.now()
+				  }
+				}
+			})
+		</script>
+	</body>
+</html>

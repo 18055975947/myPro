@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+			}
+			#main{
+				height:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main" v-on:contextmenu.prevent="test">
+			<!--<p v-on:click="alt">123</p>-->
+			<div class="outer" @click="outer">
+				1
+				<div class="middle" @click="middle">
+					2
+					<div class="inner" @click="inner">3</div>
+				</div>
+			</div>
+			{{text|capitalize|revers}}
+			{{count|pow|RMB}}
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#main",
+				data:{
+					text:"china",
+					count:"10"
+				},
+				computed:{
+					outer:function(){
+						alert(1)
+					},
+					middle:function(){
+						alert(2)
+					},
+					inner:function(){
+						alert(3)
+					},
+					test:function(){
+						alert(4)
+					}
+				},
+				filters: {
+				    capitalize: function (value) {
+				      	if (!value) return ''
+				      	value = value.toString()
+				      	return value.charAt(0).toUpperCase() + value.slice(1)
+				    },
+				    revers:function(value){
+				    	if(!value) return ''
+				    	value = value.toString();
+				    	return value.split("").reverse().join("");
+				    },
+				    pow:function(value){
+				    	if(!value) return '';
+				    	value = Number(value);
+				    	return value*value;
+				    },
+				    RMB:function(value){
+				    	if(!value) return '';
+				    	if(isNaN(value)) return '';
+				    	return "¥ "+value;
+				    }
+				}
+			})
+			
+//			app.outer();
+			console.log(app)
+		</script>
+	</body>
+</html>

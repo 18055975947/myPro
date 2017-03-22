@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+			@font-face {font-family: "iconfont";
+			  src: url('../iconfont/iconfont.eot?t=1490067559111'); /* IE9*/
+			  src: url('../iconfont/iconfont.eot?t=1490067559111#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			  url('../iconfont/iconfont.woff?t=1490067559111') format('woff'), /* chrome, firefox */
+			  url('../iconfont/iconfont.ttf?t=1490067559111') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+			  url('../iconfont/iconfont.svg?t=1490067559111#iconfont') format('svg'); /* iOS 4.1- */
+			}
+			
+			.iconfont {
+			  font-family:"iconfont" !important;
+			  font-size:16px;
+			  font-style:normal;
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			}	
+			.icon-fileghost:before { content: "\e6dd"; }
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<com></com>
+		</div>
+		<div id="app2">
+			<com></com>
+		</div>
+		<script type="text/javascript">
+//			注册的是全局组件
+//			Vue.component('com',{
+//				template:'<div><input type="text" v-model="val"/><span>{{val}}</span></div>',
+//				data:function(){
+//					return {val:""}
+//				}
+//			})
+//			var app = new Vue({
+//				el:"#app"
+//			})
+//			
+//			var app2 = new Vue({
+//				el:"#app2"
+//			})
+
+
+//			注册局部组件 组件的作用范围在app当中
+			
+			var test = {
+				template:'<div><input type="text" v-model="val"/><i v-bind:class="val"></i></div>',
+				data:function(){
+					return {val:""}
+				}
+			}
+			
+			var app = new Vue({
+				el:"#app",
+				components:{
+					'com':test
+				},
+				beforeDestroy:function(){
+					alert("app 被销毁");
+				}
+			})
+//			setTimeout(function(){
+//				app.$destroy();
+//			},10000)
+			
+			
+//			var app = new Vue({
+//				data:{
+//					val:""
+//				},
+//				created: function () {
+//				    // `this` 指向 vm 实例
+//				    console.log('val is: ' + this.val)
+//				}
+//			})
+//			app.$mount(document.getElementById("app"));
+			
+//			app.$watch('val',function(newVal,oldVal){
+//				console.log("val属性值由"+oldVal+"该到了"+newVal);
+//			})
+		</script>
+	</body>
+</html>

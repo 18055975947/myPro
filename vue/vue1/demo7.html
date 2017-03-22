@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<span>{{firstName}}</span>
+			<span>{{fullName}}</span>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					firstName:"yizhi",
+					lastName:"shao"
+				},
+//				watch:{
+//					firstName:function(value){
+//						console.log(1)
+//						this.fullName = value+" "+this.lastName;
+//					},
+//					lastName:function(value){
+//						console.log(2)
+//						this.fullName = this.firstName+" "+value;
+//					}
+//				}
+//				computed:{
+//					getFullName:function(){
+//						return this.firstName + " " + this.lastName;
+//					}
+//				}
+			})
+		</script>
+	</body>
+</html>

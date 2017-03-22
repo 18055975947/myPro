@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			span{
+				background:gray;cursor:pointer;color:white;
+			}
+			.active{
+				background:red;
+			}
+			.textDanger{
+				border:2px solid #ff00ff;
+			}
+			.btn{
+				display:inline-block;
+				padding:5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<span class="btn" v-bind:class="{active:isActive,textDanger:isDanger}" @click="clickHandler">active</span>
+			<span v-if="isActive">
+				<i>OH!</i>YES
+			</span>
+			<span v-else><i>COMON!</i>NO</span>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#main",
+				data:{
+					isActive:false,
+					isDanger:true
+				},
+				methods:{
+					clickHandler:function(){
+						if(this.isActive){
+							this.isActive = false;
+						}else{
+							this.isActive = true;
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

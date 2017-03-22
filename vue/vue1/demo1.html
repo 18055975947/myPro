@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app1">
+			{{message}}
+		</div>
+		<div id="app2">
+			<!--v-bind方法是绑定行内属性用的-->
+		  <span v-bind:title="message">
+		    Hover your mouse over me for a few seconds
+		    to see my dynamically bound title!
+		  </span>
+		</div>
+		<div id="app3">
+			<input type="text" placeholder="请输入11位手机号" v-model="phone" v-on:change="checkusername"/><span v-if="isphonenumOK">请输入正确的手机号</span>
+		</div>
+		
+		<div id="app4">
+		  <ol>
+		    <li v-for="todo in todos">
+		      {{ todo.text }}
+		    </li>
+		  </ol>
+		  <todo-item></todo-item>
+		</div>
+		<div id="app5">
+			<input type="text" v-model="text"/>
+			<span>{{text}}</span>
+		</div>
+		<div id="app6">
+			<ul>
+				<list-item v-for="item in lists" v-bind:item="item"></list-item>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			Vue.component('todo-item', {
+			  template: '<li>This is a todo</li>'
+			})
+			
+			Vue.component("list-item",{
+				props:['item'],
+				template:'<li>{{item.text}}</li>'
+			})
+			
+			new Vue({
+				el:"#app1",
+				data:{
+					message:"hello world!"
+				}
+			})
+			
+			new Vue({
+				el:"#app2",
+				data:{
+					message:"hover"
+				}
+			})
+			
+			new Vue({
+				el:"#app3",
+				data:{
+					phone:"",
+					isphonenumOK:false
+				},
+				methods:{
+					checkusername:function(){
+						this.isphonenumOK = !/^1[34578]\d{9}$/.test(this.phone);
+					}
+				}
+			})
+			
+			var app4 = new Vue({
+				el:"#app4",
+				data:{
+					todos:[{
+						text:"香蕉"
+					},{
+						text:"菊花"
+					},{
+						text:"木瓜"
+					},{
+						text:"椰奶"
+					}]
+				}
+			})
+			
+			new Vue({
+				el:"#app5",
+				data:{
+					text:""
+				}
+			})
+			
+			new Vue({
+				el:"#app6",
+				data:{
+					lists:[{
+						text:"hello"
+					},{
+						text:"world"
+					},{
+						text:"ketty"
+					}]
+				}
+			})
+		</script>
+	</body>
+</html>

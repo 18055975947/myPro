@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<button @click="userLogin">账号登录</button><button @click="phoneLogin">手机号登录</button>
+			<div v-if="loginType=='username'">
+				<input v-model="username" type="text" placeholder="请输入账号" key="input-username"/>
+				<input type="password" placeholder="请输入密码"/>
+			</div>
+			<div v-else>
+				<input v-model="userphone" type="text" placeholder="请输入手机号" key="input-userphone"/>
+				<input type="password" placeholder="请输入密码"/>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					loginType:"username",
+					username:"",
+					userphone:""
+				},
+				methods:{
+					userLogin:function(){
+						this.loginType = "username";
+						this.userphone = "";
+					},
+					phoneLogin:function(){
+						this.loginType = "phonenum";
+						this.username = "";
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

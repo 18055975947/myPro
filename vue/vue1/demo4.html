@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input v-bind:type="inpType"/>
+			<input type="checkbox" v-model="isShow" v-on:change="toggleType"/>
+			<span>{{"操作次数"+ ((count*1<10)?("0"+count*1):(count*1))}}</span>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					isShow:false,
+					inpType:"password",
+					count:0
+				},
+				methods:{
+					toggleType:function(){
+						this.count++;
+						if(this.isShow){
+							this.inpType = "text";
+						}else{
+							this.inpType = "password";
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

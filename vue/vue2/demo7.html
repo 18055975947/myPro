@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<select v-model="selected">
+				<option v-for="item in girls" :value="item">{{item.name}}</option>
+			</select>
+			<div>{{selected}}</div>
+			<!--<input type="number" v-model.number="inptext"/>-->
+			<input type="text" v-model.trim="inptext"/>
+			<span>{{inptext}}</span>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					girls:[{
+						name:"gyy",
+						age:"18"
+					},{
+						name:"jjw",
+						age:"18"
+					},
+					{
+						name:"czym",
+						age:"18"
+					}],
+					selected:{
+						name:"gyy",
+						age:"18"
+					},
+					inptext:""
+				}
+			})
+		</script>
+	</body>
+</html>

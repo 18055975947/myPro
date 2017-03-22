@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="../src/vue.js"></script>
+</head>
+<body> 
+    <div id="box">
+        {{fullName}}
+        <br/>
+        {{newName}}
+    </div>
+    <script type="text/javascript">
+       var app = new Vue({
+       	 el:"#box",
+       	 data:{
+       	 	fullName:"yizhi shao"
+       	 },
+       	 computed:{
+       	 	newName:{
+       	 		get:function(){
+       	 			console.log(2)
+       	 			return this.fullName + "!";
+	       	 	},
+	       	 	set:function(newVal){
+	       	 		console.log(1)
+	       	 		this.fullName = newVal;
+	       	 	}
+       	 	}
+       	 }
+       })
+    </script>
+</body>
+</html>

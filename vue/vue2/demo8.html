@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<apphead></apphead>
+			<con></con>
+			<foot></foot>
+		</div>
+		<div id="app2">
+			<apphead></apphead>
+			<con></con>
+			<foot></foot>
+		</div>
+		<script type="text/javascript">
+			Vue.component("apphead",{
+				template:'<header>hello header!</header>'
+			})
+			Vue.component("con",{
+				template:'<span>hello world!</span>'
+			})
+			
+			var foot = {
+				template:'<footer>hello footer!</footer>'
+			}
+			
+			var app = new Vue({
+				el:"#app",
+				components:{
+					"foot":foot
+				}
+			})
+			var app2 = new Vue({
+				el:"#app2"
+			})
+		</script>
+	</body>
+</html>
