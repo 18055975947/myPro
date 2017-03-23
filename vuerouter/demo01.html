@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>router</title>
+</head>
+<script type="text/javascript" src="vue/vue.min.js"></script>
+<script type="text/javascript" src="vue/vue-router.min.js"></script>
+<body>
+<div id="main">
+	<com1></com1>
+	<com2></com2>
+</div>
+</body>
+<script type="text/javascript">
+	var com1 = {
+		template : "<div><ul><li><router-link to='/home'>home</router-link></li><li><router-link to='/about'>about</router-link></li><li><router-link to='/more'>more</router-link></li><li><router-link to='/user'>user</router-link></li></ul></div>"
+	};
+	var com2 = {
+		template : "<div><router-view>index</router-view></div>"
+	};
+	var home = {
+		template : "<div><router-link to='/home/book'>List</router-link><router-link to='/home/girl'>Dis</router-link><router-view></router-view></div>"
+	};
+	var about = {
+		template : "<div>about</div>"
+	};
+	var more = {
+		template : "<div>more</div>"
+	};
+	var user = {
+		template : "<div>user</div>"
+	};
+	var book = {
+		template : "<ul><li>金瓶梅</li><li>金鳞</li></ul>"
+	};
+	var girl = {
+		template : "<ul><li>潘金莲</li><li>苍井空</li></ul>"
+	};
+	var routes = [
+		{path : "/home",component : home,children:[
+			{path : "book",component : book},
+			{path : "girl",component : girl}
+		]},
+		{path : "/about",component : about},
+		{path : "/more",component : more},
+		{path : "/user",component : user}
+	];
+	var router = new VueRouter({
+		routes
+	});
+	var app = new Vue({
+		el : "#main",
+		router,
+		components : {
+			"com1" : com1,
+			"com2" : com2,
+			"book" : book,
+			"girl" : girl
+		}
+	})
+</script>
+</html>

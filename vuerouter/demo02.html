@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>router</title>
+</head>
+<script type="text/javascript" src="vue/vue.min.js"></script>
+<script type="text/javascript" src="vue/vue-router.min.js"></script>
+<body>
+<div id="main">
+	<com1></com1>
+	<com2></com2>
+</div>
+</body>
+<script type="text/javascript">
+	var com1 = {
+		template : "<div><ul><li><router-link to='/home'>home</router-link></li><li><router-link to='/about'>about</router-link></li><li><router-link to='/more'>more</router-link></li></ul></div>"
+		}
+		var com2 = {
+		template : "<section><router-view></router-view></section>"
+		}
+		var comhone = {		//路由套路由
+		template : "<div>home<router-link to='/home/list'>List</router-link><router-link to='/home/dir'>Dis</router-link><router-view></router-view></div>"
+		}
+		var list = {
+		template : "<div>list</div>"
+		}
+		var dir = {
+		template : "<div>dir</div>"
+		}
+		var comabout = {
+		template : "<div>about</div>"
+		}
+		var commore = {
+		template : "<div>more</div>"
+		}
+		var routes = [							//子路由
+			{path : "/home",component : comhone ,children :[
+			{path : "list",component : list},
+			{path : "dir",component : dir}
+			]},
+			{path : "/about",component : comabout },
+			{path : "/more",component : commore }
+		]
+		var router = new VueRouter({
+		routes : routes
+		})
+		var app = new Vue({
+		router,
+		el : "#main",
+		components : {
+		"com1" : com1,
+		"com2" : com2,
+		"comhone " : comhone ,
+		"comabout " : comabout ,
+		"commore " : commore ,
+		"list" : list,
+		"dir" : dir
+		}
+		});
+</script>
+</html>
