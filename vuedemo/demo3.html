@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../src/ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="(item,index) in items">
+					<span>{{index}}</span>
+					<img :src="item.goodsListImg"/>
+					<h2>{{item.goodsName}}</h2>
+					<p><span>{{item.discount==0?item.price:item.price*item.discount/10 | RMB}}</span><span>{{item.price|RMB}}</span></p>
+				</li>
+			</ul>
+			<ul>
+				<li v-for="n in 10">{{n}}</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					items:[]
+				},
+				created:function(){
+					var that = this;
+					ajax({
+						url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+						success:function(res){
+							eval(res);
+							function callback(info){
+								console.log(info);
+								that.items = info;
+							}
+						}
+					})
+				},
+				filters:{
+					RMB:function(val){
+						if(val=="") return "";
+						return "¥ "+val;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

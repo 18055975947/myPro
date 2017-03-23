@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<child>
+				<p>我会替换子组件slot</p>
+				<p>我也会替换子组件slot</p>
+			</child>
+		</div>
+		<script type="text/javascript">
+			var child = {
+				template:'<div><h2>子组件</h2><slot>分发的内容会被填入到slot中</slot></div>'
+			}
+			var app = new Vue({
+				el:"#app",
+				components:{
+					"child":child
+				}
+			})
+		</script>
+	</body>
+</html>

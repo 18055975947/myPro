@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="item in items" v-if="item.even=='even'">{{item.count}}</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					items:[{
+						count:1,
+						even:"odd"
+					},{
+						count:2,
+						even:"even"
+					},{
+						count:3,
+						even:"odd"
+					},{
+						count:4,
+						even:"even"
+					},{
+						count:5,
+						even:"odd"
+					},{
+						count:6,
+						even:"even"
+					},{
+						count:7,
+						even:"odd"
+					},{
+						count:8,
+						even:"even"
+					},{
+						count:9,
+						even:"odd"
+					},{
+						count:10,
+						even:"even"
+					},]
+				}
+			})
+		</script>
+	</body>
+</html>

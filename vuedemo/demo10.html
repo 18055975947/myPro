@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{total}}</p>
+			<child v-on:plus="plustotal"></child>
+		</div>
+		<script type="text/javascript">
+			Vue.component("child",{
+				template:"<div><input type='number' v-model.number='num1'>+<input type='number' v-model.number='num2'><button @click='plus(num1,num2)'>plus</button></div>",
+				data:function(){
+					return {
+						num1:0,
+						num2:0
+					}
+				},
+				methods:{
+					plus:function(num1,num2){
+						this.$emit('plus',num1,num2);
+					}
+				}
+			})
+			var app = new Vue({
+				el:"#app",
+				data:{
+					total:0
+				},
+				methods:{
+					plustotal:function(num1,num2){
+						this.total = num1 + num2;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

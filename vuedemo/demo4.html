@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="todo-list-example">
+		  <input
+		    v-model="newTodoText"
+		    v-on:keyup.enter="addNewTodo"
+		    placeholder="Add a todo"
+		  >
+		  <ul>
+		    <li
+		      is="todo-item"
+		      v-for="(todo, index) in todos"
+		      v-bind:key="todo"
+		      v-bind:title="todo"
+		      v-bind:index = "index"
+		    ></li>
+		  </ul>
+		</div>
+		<script type="text/javascript">
+//			注册了全局组件
+			Vue.component('todo-item', {
+				data:function(){
+					return {
+						isEditShow:false,
+						editCon:""
+					}
+				},
+			  template: '<li><span v-if="!isEditShow">{{ title }}</span><input  v-bind:index="index" v-model="editCon" v-else @keyup.enter="save"/><button v-bind:index="index" v-on:click="remove">X</button><button @click="edit">编辑</button></li>',
+			  props: ['title','index'],
+			  methods:{
+			    remove:function(e){
+			    	var index = parseInt(e.target.getAttribute("index"));
+			    	app.todos.splice(index,1);
+			    },
+			    edit:function(e){
+			    	this.isEditShow = true;
+			    },
+			    save:function(e){
+			    	console.log(e.target)
+			    	var index = parseInt(e.target.getAttribute("index"));
+			    	console.log(index)
+			    	app.todos.splice(index,1,this.editCon);
+			    	this.editCon = "";
+			    	this.isEditShow = false;
+			    }
+			  }
+			})
+			var app = new Vue({
+			  el: '#todo-list-example',
+			  data: {
+			    newTodoText: '',
+			    todos: [
+			      'Do the dishes',
+			      'Take out the trash',
+			      'Mow the lawn'
+			    ]
+			  },
+			  methods: {
+			    addNewTodo: function () {
+			      this.todos.push(this.newTodoText);
+			      this.newTodoText = '';
+			    }
+			  }
+			})
+		</script>
+	</body>
+</html>

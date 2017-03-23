@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="app">
+		<comhead></comhead>
+		<comfoot v-bind:msg="msg"></comfoot>
+	</div>
+	<script type="text/javascript">
+		var head = {
+			template:'<div><span>{{counter}}</span><button @click="add">plus</button></div>',
+			data:function(){
+				return {
+					counter:0
+				}
+			},
+			methods:{
+				add:function(){
+					this.counter += 1;
+					bus.$emit("passmsg",this.counter);
+				}
+			}
+		}
+		var foot = {
+			props:["msg"],
+			template:'<span>{{msg}}</span>'
+		}
+		
+		var app = new Vue({
+			el:"#app",
+			components:{
+				"comhead":head,
+				"comfoot":foot
+			},
+			data:{
+				msg:""
+			}
+		})
+		
+		var bus = new Vue({});
+		bus.$on("passmsg",function(res){
+			app.msg = res;
+		})
+	</script>
+</body>
+</html>

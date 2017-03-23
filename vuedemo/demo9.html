@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../src/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="msg"/>
+			<child :message="msg"></child>
+		</div>
+		<script type="text/javascript">
+			var child = {
+				props:["message"],
+				template:"<span>{{message}}</span>"
+			}
+			var app = new Vue({
+				el:"#app",
+				data:{
+					msg:""
+				},
+				components:{
+					"child":child
+				}
+			})
+		</script>
+	</body>
+</html>
