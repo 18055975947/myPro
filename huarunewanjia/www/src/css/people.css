@@ -1,0 +1,100 @@
+#people{
+    background: #ededed;
+}
+
+#people .ph3{
+    font: 14px/46px "";
+    color: #6f6f6f;
+}
+#people .ph3 a{
+    color: #666;
+}
+#people .ph3 .a3{
+    color: #000000;
+}
+#people .left{
+     width: 250px;
+     font: 16px/45px "";
+ }
+#people .left dl{
+    width: 250px;
+    font: 16px/45px "";
+    background: #fff;
+}
+#people .left dt{
+    color: #222222;
+    width: 250px;
+    padding: 0 25px;
+    font: 16px/45px "";
+}
+#people .left dd{
+    color: #5b5b5b;
+    width: 250px;
+    padding: 0 25px;
+    font: 16px/45px "";
+}
+#people .left dd.peodd{
+    background: #e14041;
+    color: #fff;
+}
+#people .left dd:hover{
+    width: 250px;
+    background: #e14041;
+    color: #fff;
+}
+#people .right{
+    width: 925px;
+    background: #fff;
+    padding: 0 25px;
+    height: 710px;
+}
+#people .right .rh3{
+    font: 16px/45px "";
+    color: #333333;
+    /*padding: 0 26px;*/
+}
+#people .right .wcd{
+    background: #f9f9f9;
+    font: 14px/57px "";
+    border: 1px solid #e7e7e7;
+    width: 873px;
+    margin: 20px 0;
+}
+#people .right .wcd .rsp1{
+    margin-left: 18px;
+    color: #333333;
+}
+#people .right form p{
+    height: 35px;
+}
+#people .right form p .fsp1{
+    margin-left: 48px;
+}
+#people .right form p .fsp4{
+    margin-left: 62px;
+}
+#people .right form p .fsp3{
+    margin-left: 33px;
+}
+#people .right form .fl{
+    width: 380px;
+}
+#people .right form p .finp{
+    height: 28px;
+}
+#people .right .back{
+    cursor: pointer;
+    position: relative;
+    left: 112px;
+    width: 75px;
+    height: 30px;
+    background: #e14041;
+}
+#people .right #baocun{
+    cursor: pointer;
+    position: relative;
+    left: 135px;
+    top: -85px;
+    /*background: #e14041;*/
+    color: #fff;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员专区</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/vip.css">
+    <link href="../js/lib/bootstrap-3.3.0/less/glyphicons.less">
+    <link href="../js/lib/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="">
+    <img src="../images/bannaer1.jpg"/>
+</header>
+
+<div class="margin1" id="nav">
+    <div class=" l">
+        <ul class="">
+            <li>我在深圳</li>
+            <li class="line loginOut">|</li>
+            <li><span id="user"></span>您好，欢迎来<span class="span1">e万家</span></li>
+            <li class="line loginOut">|</li>
+            <li class="loginOut"><a class="headstyle dl" href="login.html">登录</a></li>
+            <li class="line loginOut">|</li>
+            <li class="loginOut"><a class="headstyle mr15 zc" href="register.html">注册</a></li>
+        </ul>
+    </div>
+    <div class=" r">
+        <ul class="clearfix" data-type="textLinkList" data-id="header:rightNaves">
+            <li><a class="headstyle" href="javascript:window.open('http://14.29.4.197:9000/?ht=hrEWJ001&amp;GpId=&amp;ClientType=iscompact&amp;Version=&amp;id=8080152&amp;bgColor=&amp;ud=','newwindow','height=820,width=1000,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');" target="_blank">在线客服</a></li>
+            <li class="line">|</li>
+            <li><a href="/ucenter/del_vouchers.html" target="_blank" class="red-font"><span class="glyphicon glyphicon-credit-card span2"></span>&ensp;<span class="span1">VIP提货券</span></a></li>
+            <li class="line">|</li>
+            <li><a href="/help.html?id=a_170000" target="_blank" class="red-font"><span class="span1">消费者告知书</span></a></li>
+            <li class="line">|</li>
+            <li><a class="headstyle" href="/help.html" target="_blank">我的订单</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="header">
+    <div class="margin1">
+        <div class="logo l">
+            <a href="http://www.ewj.com/"> <img src="../images/1.gif"></a>
+        </div>
+        <div class="l center">
+            <div class="input">
+                <input type="text" id="search"> <span class="glyphicon glyphicon-search span2" id="searchshop"></span>
+            </div>
+            <ul id="list"></ul>
+            <ul class="ul2">
+                <li>热门：</li>
+                <li><a href="#">每时每刻</a></li>
+                <li><a href="#">月饼</a></li>
+                <li><a href="#">小龙虾</a></li>
+                <li><a href="#">大闸蟹</a></li>
+                <li><a href="#">衣服</a></li>
+                <li><a href="#">鲜花</a></li>
+            </ul>
+        </div>
+        <div class="right l">
+            <img src="../images/shopcar.jpg">&emsp;<span class="cursor">购入<span class="span1">0</span>件商品</span>
+        </div>
+    </div>
+    <nav>
+        <ul class="margin1" id="navul">
+            <li><a href="#"> <span class="glyphicon glyphicon-align-justify navspan"></span>&emsp;商品分类</a></li>
+            <li><a href="#">Enjoy 深圳</a></li>
+            <li><a href="#">跨境购</a></li>
+            <li><a href="#">产地直采</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="people">
+    <div class="margin1 people clear">
+        <h3 class="ph3"><a href="../index.html" >首页</a> > <a href="#">我的万家</a> > <a href="#" class="a3">个人资料</a></h3>
+        <div class="l left" id="vipdt">
+            <div><img src="../images/people.jpg"></div>
+            <dl>
+                <dt>交易管理</dt>
+                <dd>我的订单</dd>
+                <dd>我的收藏</dd>
+            </dl>
+            <dl>
+                <dt>账户信息</dt>
+                <dd>我的积分</dd>
+                <dd>我的优惠券</dd>
+                <dd>门店会员卡</dd>
+            </dl>
+            <dl>
+                <dt>个人信息</dt>
+                <dd class="peodd">个人资料</dd>
+                <dd>安全中心</dd>
+                <dd>地址管理</dd>
+            </dl>
+            <dl>
+                <dt>客户服务</dt>
+                <dd>退换货申请</dd>
+                <dd>退换货记录</dd>
+            </dl>
+        </div>
+        <div class="r vipr">
+            <div class="top clear">
+                <img src="../images/header2.jpg" class="l">
+                <div class="l tc" >
+                    <h3 class="th32">用户名 ： <span class="tcsp1">gqk</span></h3>
+                    <h3 class="th31">安全等级 ： <span class="tcsp1">高</span></h3>
+                    <h3 class="th31">
+                        <a href="#">密码修改</a>
+                        <a href="#">绑定手机</a>
+                        <a href="#">邮箱绑定</a>
+                    </h3>
+                </div>
+                <div class="l tr">
+                    <p>我的积分 ： <span class="trsp1">500分</span> <a href="#">查看</a></p>
+                    <p>我的优惠券 ： <span class="trsp1">0张</span> <a href="#">查看</a></p>
+                </div>
+            </div>
+            <div class="middle">
+                <h3 class="mh31 clear"><span class="l">最近订单</span> <a class="r" href="#">查看所有订单</a></h3>
+                <table>
+                    <tr>
+                        <td>订单商品</td>
+                        <td>下单日期</td>
+                        <td>金额</td>
+                        <td>状态</td>
+                        <td>操作</td>
+                    </tr>
+                </table>
+                <div class="mdiv">您还没有订单数据</div>
+            </div>
+            <div class="middle">
+                <h3 class="mh31 clear"><span class="l">最近收藏</span> <a class="r" href="#">查看所有收藏</a></h3>
+                <table>
+                    <tr>
+                        <td>商品</td>
+                        <td>收藏日期</td>
+                        <td>单价</td>
+                        <td>操作</td>
+                    </tr>
+                </table>
+                <div class="mdiv">目前没有数据</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sev">
+    <div class="margin1 sev">
+        <ul id="sevul" class="clear">
+            <li><img class="fl" src="../images/1.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="fl" src="../images/2.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="f3" src="../images/3.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="fl" src="../images/4.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="fl" src="../images/5.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+        </ul>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="margin1" id="foot">
+        <dl>
+            <dt>购物指南</dt>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">收货贴士</a></dd>
+            <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+            <dt>配送信息</dt>
+            <dd><a href="#">配送政策</a></dd>
+            <dd><a href="#">送货查询</a></dd>
+        </dl>
+        <dl>
+            <dt>支付方式</dt>
+            <dd><a href="#">在线支付</a></dd>
+            <dd><a href="#">货到付款</a></dd>
+            <dd><a href="#">支付问题</a></dd>
+        </dl>
+        <dl>
+            <dt>售后服务</dt>
+            <dd><a href="#">售后政策</a></dd>
+            <dd><a href="#">退款说明</a></dd>
+            <dd><a href="#">退货地址</a></dd>
+        </dl>
+        <dl>
+            <dt>优惠政策</dt>
+            <dd><a href="#">积分政策</a></dd>
+            <dd><a href="#">优惠规则</a></dd>
+            <dd><a href="#">华润福卡</a></dd>
+        </dl>
+        <dl>
+            <dt>友情链接</dt>
+            <dd><a href="#">华润官网</a></dd>
+        </dl>
+    </div>
+</div>
+
+<div id="mes">
+    <div class="margin1" id="meserweima">
+        <img src="../images/erweima1.jpg" class="l">
+        <div class="l er">
+            <h3 class="mesh3">e万家客户端</h3>
+            <p class="mesp">扫描有惊喜</p>
+            <div class="phone">
+                <img src="../images/phone1.jpg">
+                <img src="../images/phone2.jpg">
+            </div>
+        </div>
+        <img src="../images/erweima2.jpg" class="l san">
+        <div class="l er">
+            <h3 class="mesh3">e万家客户端</h3>
+            <p class="mesp">扫描有惊喜</p>
+        </div>
+    </div>
+</div>
+
+<div class="web_map_My" data-type="htmlSource" data-id="footer:MyWebMap" id="foo">
+    <a href="http://www.ewj.com/help.html?id=a_200001" target="_blank">
+        关于我们
+    </a>｜
+    <a href="http://www.ewj.com/help.html?id=a_150000" target="_blank">
+        联系我们
+    </a>｜
+    <a href="http://m.ewj.com/" target="_blank">
+        触屏版
+    </a>
+        <span class="copyright">
+            Copyright@华润万家有限公司  粤ICP备05036369号-4   ewj.com 版权所有
+        </span>
+</div>
+</body>
+</html>
+<script src="../js/lib/jquery-3.0.0.js"></script>
+<script src="../js/lib/layer/layer.js"></script>
+<script src="../js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/lib/jquery.cookie.js"></script>
+<script src="../jscript/vip.js"></script>

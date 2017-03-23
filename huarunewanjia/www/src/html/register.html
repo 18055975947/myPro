@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link href="../js/lib/bootstrap-3.3.0/less/glyphicons.less">
+    <link href="../js/lib/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="header" id="header">
+    <div class="margin1">
+        <a href="../index.html" class="a1"><img class="l" src="../images/1.gif"></a>
+        <div class="r hr">
+            <span> 您好，欢迎您来到华润e万家</span>&emsp;<span>|</span>&emsp;<a class="a2" href="http://www.ewj.com/help.html">帮助中心</a>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div class="margin1 main">
+        <div class="top">
+            <span class="l" id="login">用户登录</span>
+            <a class="r spr">新用户注册</a>
+        </div>
+        <div class="middle">
+            <p><span>* </span>用户名：<input type="text" placeholder="请输入您的用户名，支持4-20字符" id="text"></p>
+            <p><span>* </span>手机号码：<input type="tel" placeholder="输入您的手机号码" id="phone"></p>
+            <p><span>* </span>验证码：<input type="text" placeholder="请填写验证码" class="inp yz" id="yanzheng">
+                <input type="text" id="inp5" readonly="readonly" class="inp5" style="width: 90px;height: 30px;float: none;">
+                <a href="javascript:;" id="flushCode">看不清，换一张？</a></p>
+            <p><span>* </span>短信验证码：<input type="text" placeholder="输入短信验证码" class="inp dxyz" id="duanxin">
+            </p>
+            <p><span>* </span>设置密码：<input id="password" type="password" placeholder="请设置您的密码，支持6-20位字符，区分大小写"></p>
+            <p><span>* </span>确认密码：<input id="remainpass" type="password" placeholder="请确认密码" ></p>
+            <p><span class="tui">推广语：</span><input id="tui" type="text" placeholder="输入推广码(可不填)" class="inp tg"></p>
+            <p class="pyes"><input type="checkbox" class="check" id="check">我已阅读并同意<a href="#" class="a3">e万家服务协议</a></p>
+            <input type="button" value="完成注册" class="zhuce"  id="success">
+            <p><a href="#" class="a4">企业用户注册 ></a></p>
+        </div>
+    </div>
+</div>
+
+<div class="web_map_My" data-type="htmlSource" data-id="footer:MyWebMap" id="foo">
+    <a href="http://www.ewj.com/help.html?id=a_200001" target="_blank">
+        关于我们
+    </a>｜
+    <a href="http://www.ewj.com/help.html?id=a_150000" target="_blank">
+        联系我们
+    </a>｜
+    <a href="http://m.ewj.com/" target="_blank">
+        触屏版
+    </a>
+        <span class="copyright">
+            Copyright@华润万家有限公司  粤ICP备05036369号-4   ewj.com 版权所有
+        </span>
+</div>
+</body>
+</html>
+<script src="../js/lib/jquery-3.0.0.js"></script>
+<script src="../js/lib/layer/layer.js"></script>
+<script src="../js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/lib/jquery.cookie.js"></script>
+<script src="../js/registerjs/register.js"></script>

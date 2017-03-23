@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/vip.css">
+    <link href="../js/lib/bootstrap-3.3.0/less/glyphicons.less">
+    <link href="../js/lib/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="">
+    <img src="../images/bannaer1.jpg"/>
+</header>
+
+<div class="margin1" id="nav">
+    <div class=" l">
+        <ul class="">
+            <li>我在深圳</li>
+            <li class="line loginOut">|</li>
+            <li>您好，欢迎来<span class="span1">e万家</span></li>
+            <li class="line loginOut">|</li>
+            <li class="loginOut"><a class="headstyle dl" href="login.html">登录</a></li>
+            <li class="line loginOut">|</li>
+            <li class="loginOut"><a class="headstyle mr15 zc" href="register.html">注册</a></li>
+        </ul>
+    </div>
+    <div class=" r">
+        <ul class="clearfix" data-type="textLinkList" data-id="header:rightNaves">
+            <li><a class="headstyle" href="javascript:window.open('http://14.29.4.197:9000/?ht=hrEWJ001&amp;GpId=&amp;ClientType=iscompact&amp;Version=&amp;id=8080152&amp;bgColor=&amp;ud=','newwindow','height=820,width=1000,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');" target="_blank">在线客服</a></li>
+            <li class="line">|</li>
+            <li><a href="/ucenter/del_vouchers.html" target="_blank" class="red-font"><span class="glyphicon glyphicon-credit-card span2"></span>&ensp;<span class="span1">VIP提货券</span></a></li>
+            <li class="line">|</li>
+            <li><a href="/help.html?id=a_170000" target="_blank" class="red-font"><span class="span1">消费者告知书</span></a></li>
+            <li class="line">|</li>
+            <li><a class="headstyle" href="/help.html" target="_blank">我的订单</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="header">
+    <div class="margin1">
+        <div class="logo l">
+            <a href="http://www.ewj.com/"> <img src="../images/1.gif"></a>
+        </div>
+        <div class="l center">
+            <div class="input">
+                <input type="text" id="search"> <span class="glyphicon glyphicon-search span2" id="searchshop"></span>
+            </div>
+            <ul id="list"></ul>
+            <ul class="ul2">
+                <li>热门：</li>
+                <li><a href="#">每时每刻</a></li>
+                <li><a href="#">月饼</a></li>
+                <li><a href="#">小龙虾</a></li>
+                <li><a href="#">大闸蟹</a></li>
+                <li><a href="#">衣服</a></li>
+                <li><a href="#">鲜花</a></li>
+            </ul>
+        </div>
+        <div class="right l" id="shopnum">
+            <img src="../images/shopcar.jpg">&emsp;<span class="cursor">购入<span class="span1" id="shops">0</span>件商品</span>
+        </div>
+    </div>
+    <nav>
+        <ul class="margin1" id="navul">
+            <li><a href="#"> <span class="glyphicon glyphicon-align-justify navspan"></span>&emsp;商品分类</a></li>
+            <li><a href="#">Enjoy 深圳</a></li>
+            <li><a href="#">跨境购</a></li>
+            <li><a href="#">产地直采</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="people">
+    <div class="margin1 people clear">
+        <h3 class="ph3"><a href="#" >首页</a> > <a href="#">我的万家</a> > <a href="#" class="a3">个人资料</a></h3>
+        <div class="l left">
+            <div><img src="../images/shopt1.jpg"></div>
+            <dl>
+                <dd>冷冻蔬菜</dd>
+                <dd>调味菜</dd>
+                <dd>根茎瓜果</dd>
+                <dd>新鲜菌菇</dd>
+            </dl>
+        </div>
+        <div class="r shopr">
+            <div class="shoptop">
+                 品牌 ：<span>不限</span> <span>东升<a>(13)</a></span> <span>东元兴<a>(17)</a></span> <span>瑞雪<a>(20)</a></span>
+            </div>
+            <div id="shopmid">
+                <ul>
+                    <li>默认</li>
+                    <li>|</li>
+                    <li>价格 <img src="../images/shopt2.jpg"> <img src="../images/shopt3.jpg"></li>
+                    <li>|</li>
+                    <li>销量 <img src="../images/shopt4.jpg"></li>
+                    <li>|</li>
+                    <li>最新上架</li>
+                    <li>|</li>
+                    <li><input type="checkbox" style="float: left"> 有货</li>
+                    <li class="r">共 <span class="ulisp">74</span> 件商品</li>
+                </ul>
+            </div>
+            <div class="shopbot">
+                <div id="box"></div>
+                <button id="load">点击加载商品</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sev">
+    <div class="margin1 sev">
+        <ul id="sevul" class="clear">
+            <li><img class="fl" src="../images/1.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="fl" src="../images/2.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="f3" src="../images/3.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="fl" src="../images/4.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+            <li><img class="fl" src="../images/5.png" alt=""><span class="fl">7X24小时营业<br>全年无休</span></li>
+        </ul>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="margin1" id="foot">
+        <dl>
+            <dt>购物指南</dt>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">收货贴士</a></dd>
+            <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+            <dt>配送信息</dt>
+            <dd><a href="#">配送政策</a></dd>
+            <dd><a href="#">送货查询</a></dd>
+        </dl>
+        <dl>
+            <dt>支付方式</dt>
+            <dd><a href="#">在线支付</a></dd>
+            <dd><a href="#">货到付款</a></dd>
+            <dd><a href="#">支付问题</a></dd>
+        </dl>
+        <dl>
+            <dt>售后服务</dt>
+            <dd><a href="#">售后政策</a></dd>
+            <dd><a href="#">退款说明</a></dd>
+            <dd><a href="#">退货地址</a></dd>
+        </dl>
+        <dl>
+            <dt>优惠政策</dt>
+            <dd><a href="#">积分政策</a></dd>
+            <dd><a href="#">优惠规则</a></dd>
+            <dd><a href="#">华润福卡</a></dd>
+        </dl>
+        <dl>
+            <dt>友情链接</dt>
+            <dd><a href="#">华润官网</a></dd>
+        </dl>
+    </div>
+</div>
+
+<div id="mes">
+    <div class="margin1" id="meserweima">
+        <img src="../images/erweima1.jpg" class="l">
+        <div class="l er">
+            <h3 class="mesh3">e万家客户端</h3>
+            <p class="mesp">扫描有惊喜</p>
+            <div class="phone">
+                <img src="../images/phone1.jpg">
+                <img src="../images/phone2.jpg">
+            </div>
+        </div>
+        <img src="../images/erweima2.jpg" class="l san">
+        <div class="l er">
+            <h3 class="mesh3">e万家客户端</h3>
+            <p class="mesp">扫描有惊喜</p>
+        </div>
+    </div>
+</div>
+
+<div class="web_map_My" data-type="htmlSource" data-id="footer:MyWebMap" id="foo">
+    <a href="http://www.ewj.com/help.html?id=a_200001" target="_blank">
+        关于我们
+    </a>｜
+    <a href="http://www.ewj.com/help.html?id=a_150000" target="_blank">
+        联系我们
+    </a>｜
+    <a href="http://m.ewj.com/" target="_blank">
+        触屏版
+    </a>
+        <span class="copyright">
+            Copyright@华润万家有限公司  粤ICP备05036369号-4   ewj.com 版权所有
+        </span>
+</div>
+</body>
+</html>
+<script src="../js/lib/jquery-3.0.0.js"></script>
+<script src="../js/lib/layer/layer.js"></script>
+<script src="../js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../jscript/shop.js"></script>

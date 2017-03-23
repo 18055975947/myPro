@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/shopcar.css">
+    <link href="../js/lib/bootstrap-3.3.0/less/glyphicons.less">
+    <link href="../js/lib/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<div class="margin1">
+    <div class=" l">
+        <ul class="clear">
+            <li>我在深圳</li>
+            <li class="line loginOut">  | </li>
+            <li>您好，欢迎来<span class="span1"> e万家</span></li>
+            <li class="loginOut">&ensp;&ensp;<a class="headstyle dl" href="login.html"> 登录 </a></li>
+            <li class="line loginOut"> &ensp; &ensp; | </li>
+            <li class="loginOut">&ensp; &ensp; <a class="headstyle mr15 zc" href="register.html"> 注册 </a></li>
+        </ul>
+    </div>
+    <div class=" r">
+        <ul class="clearfix clear" data-type="textLinkList" data-id="header:rightNaves">
+            <li><a href="/help.html?id=a_170000" target="_blank" class="red-font"><span class="span1"> 收藏夹</span></a> &ensp;</li>
+            <li class="line"> &ensp;|&ensp; </li>
+            <li> &ensp;<a class="headstyle" href="/help.html" target="_blank">我的订单</a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="header" id="header">
+    <div class="margin1">
+        <a href="../index.html" class="a1"><img class="l" src="../images/1.gif"></a>
+        <div class="r hr">
+            <span> 您好，欢迎您来到华润e万家</span>&emsp;<span>|</span>&emsp;<a class="a2" href="http://www.ewj.com/help.html">帮助中心</a>
+        </div>
+    </div>
+</div>
+
+<div id="car">
+    <div class="margin1">
+        <h3 class="carh3 clear"><span class="l">购物车</span> <a class="r ra">继续购物 > </a></h3>
+        <table id="table">
+            <tr>
+                <td><input type="checkbox" class="all"> 全选 </td>
+                <td>商品</td>
+                <td>规格属性</td>
+                <td>单价</td>
+                <td>重量</td>
+                <td>数量</td>
+                <td>金额</td>
+                <td>操作</td>
+            </tr>
+            <tr class="tr">
+                <td><input type="checkbox"> e万家 </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!--<tr class="tr shoptr">
+                <td><input type="checkbox"></td>
+                <td><img src="../images/shop1.jpg"></td>
+                <td>黄瓜500g * <span class="trsp">1</span></td>
+                <td class="danjia">￥9.5</td>
+                <td><span class="trspw">0.5kg</span></td>
+                <td><input type="button" value="-" class="jian button"> <input type="text" class="text" value="1" style="text-align: center"> <input type="button" class="jia button" value="+"></td>
+                <td><span class="allmoney">￥9.5</span></td>
+                <td><input type="button" value="删除" class="del"></td>
+            </tr>-->
+        </table>
+        <div class="jifen"><img src="../images/jifen.jpg"> 购物送积分 ： 获得<span class="jfspan">9.50</span>积分</div>
+        <div class="zhangdan" style="height: 82px">
+            <input type="checkbox" class="all">&ensp;全选
+            <div class="r shopr" id="money">
+                已选中<span class="check">1</span>件商品 &ensp;&ensp;|&ensp;&ensp;总重量<span class="wight">0.00kg</span>
+                <span class="money">总计 ：￥0.00</span>
+                <p class="youHui" style="margin-left: 238px;">优惠 ： <span class="youhui" style="color: #e14041;">-￥0.00</span></p>
+            </div>
+        </div>
+        <div class="jiesuan">
+            <div class="r last" id="allmoney">
+                商品总价(不含运费) ：<span class="zongjia">￥0.00</span>
+                <input type="button" value="结算" class="input r" id="pay">
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div id="tuo" ></div>-->
+<!--<div id="glass" /><img id="glasses"></div>-->
+<div id="footer">
+    <span class="margin1">
+        Copyright@华润万家有限公司  粤ICP备05036369号-4   ewj.com 版权所有
+    </span>
+</div>
+
+</body>
+</html>
+<script src="../js/lib/jquery-3.0.0.js"></script>
+<script src="../js/lib/layer/layer.js"></script>
+<script src="../js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/lib/jquery.cookie.js"></script>
+<script src="../jscript/shopcar.js"></script>

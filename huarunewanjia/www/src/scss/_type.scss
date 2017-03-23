@@ -1,0 +1,49 @@
+html,body{
+  width : 100%;
+}
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,td,figure{margin:0;padding:0;}
+body{font:12px  "宋体"; word-wrap:break-word;}
+a,u,s,del{color:#666;text-decoration:none}
+fieldset ,a img,.bor0 {border:0;}
+i,em,b{font-style:normal;font-weight:100;}
+li{list-style:none}
+img{vertical-align:middle;cursor: pointer}
+table{border-collapse:collapse;}
+input,textarea{outline:none;}
+header{
+  width : 100%;
+}
+header img{
+  width : 100%;
+}
+ul li{
+  float: left;
+  margin-right: $marginRight;
+  line-height: $lineHeight;
+  font-size: $fontSize;
+}
+ul li a{
+  color: #666666;
+}
+ul li a:hover{
+  color : red;
+}
+a{
+  color: #666666;
+}
+span{
+  color: #666666;
+}
+nav{
+  background: #3c3c3c;
+  height:$navHeight;
+  line-height: $navHeight;
+  ul{
+    height: 100%;
+    li{
+      height: 100%;
+      width: $navliWidth;
+      line-height:$navHeight ;
+    }
+  }
+}

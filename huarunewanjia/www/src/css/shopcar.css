@@ -1,0 +1,148 @@
+body .demo-class .layui-layer-title{background:#c00; color:#fff; border: none;}
+img{
+    cursor: auto;
+}
+ul li{
+    float: left;
+}
+#car{
+    background: #ededed;
+}
+#car .carh3{
+    width: 100%;
+    font: 14px/45px "";
+    color: #333333;
+    background: #fff;
+    padding: 0 20px;
+}
+#car .carh3 .ra{
+    color: #aaaaaa;
+}
+#car table{
+    width: 100%;
+    background: #fafafa;
+    padding: 0 20px;
+}
+#car table tr{
+
+}
+#car table .tr{
+    background: #fff;
+    width: 100%;
+}
+#car table tr td{
+    width:148px ;
+    font: 14px/45px "";
+    text-align: center;
+}
+
+#car table tr td .button{
+    border: none;
+    height: 30px;
+    width: 30px;
+    background: #fff;
+}
+#car table tr td .del{
+    border: none;
+    height: 30px;
+    width: 30px;
+    background: #fff;
+}
+#car table tr td .text{
+    width: 50px;
+    height: 30px;
+    border: 1px solid #d1d1d1;
+}
+#car .jifen{
+    background: #fff;
+    padding-left: 62px;
+    font: 12px/62px "";
+    color: #929292;
+    height: 62px;
+}
+#car .zhangdan{
+    height: 82px;
+    margin-top: 22px;
+    font: 14px/20px "";
+    color: #333;
+}
+#car .zhangdan .all{
+    margin-left: 6px;
+}
+#car .zhangdan .shopr{
+    margin-right: 60px;
+}
+#car .zhangdan .shopr .wight{
+    position: relative;
+    top : -20px;
+    left : 185px;
+    display: block;
+    width: 50px;
+}
+#car .zhangdan .shopr .money{
+    position: relative;
+    left: 237px;
+    top : -40px;
+}
+#car .zhangdan .shopr p.youHui{
+    margin-left: 100px;
+    position: relative;
+    top:-40px;
+}
+#car .zhangdan .shopr span.youhui{
+    color: #e14041;
+}
+#car .jiesuan{
+    height: 46px;
+    background: #fff;
+    font: 16px/46px "";
+    color: #333333;
+}
+#car .jiesuan .last{
+    position: relative;
+    left:403px;
+    width: 356px;
+}
+#car .jiesuan .zongjia{
+    color: #e14041;
+}
+#car .jiesuan .input{
+    font: 24px/46px "";
+    background: #e14041;
+    color: #fff;
+    height: 46px;
+    width: 132px;
+    border: none;
+}
+#footer{
+    height: 200px;
+    background: #ededed;
+    text-align: center;
+    font: 16px/200px "";
+    color: #333;
+}
+/*
+#tuo{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    position: absolute;
+    opacity: .4;
+    top:319px;
+    left: 300px;
+    display: none;
+    cursor: crosshair;
+}
+#glass{
+    width: 200px;
+    height: 200px;
+    !*background: red;*!
+    position: absolute;
+    border: 1px solid #DDDDDD;
+    !*opacity: .4;*!
+    top:319px;
+    left : 400px;
+    display: none;
+    overflow: hidden;
+}
+*/

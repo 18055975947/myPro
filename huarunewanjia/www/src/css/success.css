@@ -1,0 +1,60 @@
+img{
+    cursor: auto;
+}
+#sMain{
+    background: #ededed;
+    padding-top: 40px;
+}
+#sMain .smain{
+    background: #fff url("../images/dashed.jpg") no-repeat center;
+    height: 447px;
+    padding-top: 118px;
+}
+#sMain .smain .maintop{
+    margin-left: 320px;
+    font: 18px/37px "";
+}
+#sMain .smain .mainc{
+    margin-top: 20px;
+    margin-left: 375px;
+
+}
+#sMain .smain .mainc input:nth-child(1){
+    padding: 0 20px;
+    font: 14px/28px "";
+    background: #e14041;
+    border: none;
+    border-top: 1px solid #f0a0a0;
+    border-bottom: 1px solid #c21f1f;
+    margin-right: 20px;
+    color: #fff;
+}
+#sMain .smain .mainc input:nth-child(2){
+    border: 1px solid #d1d1d1;
+    padding: 0 20px;
+    font: 14px/28px "";
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #f1f1f1));
+    background: -moz-linear-gradient(top, #fefefe 0%, #f1f1f1 100%);
+    color: #333333;
+}
+#sMain .smain .mainb{
+    margin-top: 12px;
+    margin-top: 20px;
+    margin-left: 375px;
+}
+#sMain .smain .mainb .ruleSpan{
+    margin-top: 12px;
+    color: #6d6d6d;
+    font: 600 14px/16px "";
+}
+#sMain .smain .mainb .ruleP{
+    color: #6d6d6d;
+    font: 600 14px/16px "";
+}
+#sMain .smain .mainb .ruleSpan2{
+    color: #e04040;
+}
+#foo{
+    height: 182px;
+    font: 16px/150px "";
+}

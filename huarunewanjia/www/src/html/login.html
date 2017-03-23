@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../js/lib/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="../js/lib/bootstrap-3.3.0/less/glyphicons.less">
+    <link href="../js/lib/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="header" id="header">
+        <div class="margin1">
+            <a href="../index.html" class="a1"><img class="l" src="../images/1.gif"></a>
+            <div class="r hr">
+               <span> 您好，欢迎您来到华润e万家</span>&emsp;<span>|</span>&emsp;<a class="a2" href="http://www.ewj.com/help.html">帮助中心</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="margin1 main">
+            <div class="top">
+                <span class="l">用户登录</span>
+                <a class="r spr" id="register">新用户注册</a>
+            </div>
+            <div class="middle">
+                <a href="#" class="a3 l"><img src="../images/loginmain.jpg"></a>
+                <div class="r form">
+                    <input type="hidden" name="token" value="f11503a9f6c0c0365aa4bc7d71473e03">
+                    <p class="form-group"><label>登录名 : </label><input id="inp1" class="textInput username" name="loginKey" placeholder="邮箱/用户名/已验证手机" tabindex="1"></p>
+                    <p class="mt10 form-group"><label>密码 :</label><input id="inp2" type="password" class="textInput userpassword" name="password" placeholder="请输入您的密码" tabindex="2"></p>
+                    <p class="mt10 aptchaWrap form-group"><label>验证码 : </label><input id="inp3" class="textInput aptcha yanzheng" name="captcha" placeholder="请填写验证码" tabindex="3" maxlength="4">
+                        <input type="text" id="inp5" readonly="readonly" class="inp5" style="width: 90px;height: 30px;float: none;">
+                        <a href="javascript:;" id="flushCode">看不清，换一张？</a>
+                    </p>
+                    <p class="mt35 operatePw">
+                        <span class="formspan" data-checked="false" style="">
+                            <input type="checkbox" class="check" id="inp4" >
+                            自动登录
+                            <i></i>
+                            <a href="#" style="margin-bottom:10px;" class="a4 r">忘记密码?</a>
+                        </span>
+                    </p>
+                    <p class="mt10"><button type="submit" class="SignInBtn" tabindex="4" id="btn1">登录</button></p>
+                    <input type="hidden" name="rurl" value="http://www.ewj.com/">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="web_map_My" data-type="htmlSource" data-id="footer:MyWebMap" id="foo">
+        <a href="http://www.ewj.com/help.html?id=a_200001" target="_blank">
+            关于我们
+        </a>｜
+        <a href="http://www.ewj.com/help.html?id=a_150000" target="_blank">
+            联系我们
+        </a>｜
+        <a href="http://m.ewj.com/" target="_blank">
+            触屏版
+        </a>
+        <span class="copyright">
+            Copyright@华润万家有限公司  粤ICP备05036369号-4   ewj.com 版权所有
+        </span>
+    </div>
+
+</body>
+</html>
+<script src="../js/lib/jquery-3.0.0.js"></script>
+<script src="../js/lib/layer/layer.js"></script>
+<script src="../js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/lib/jquery.cookie.js"></script>
+<script src="../js/lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="../js/loginjs/login1.js"></script>
